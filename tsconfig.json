@@ -17,6 +17,11 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "ES2022",
+    "paths": {
+      "startsys-angular-speech-recognition": [
+        "dist/startsys-angular-speech-recognition"
+      ]
+    },
     "module": "ES2022",
     "useDefineForClassFields": false,
     "lib": [

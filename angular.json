@@ -3,5 +3,38 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "startsys-angular-speech-recognition": {
+      "projectType": "library",
+      "root": "projects/startsys-angular-speech-recognition",
+      "sourceRoot": "projects/startsys-angular-speech-recognition/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/startsys-angular-speech-recognition/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/startsys-angular-speech-recognition/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/startsys-angular-speech-recognition/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/startsys-angular-speech-recognition/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
   }
 }
